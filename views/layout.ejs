@@ -1,30 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <title><%= title %></title>
-    <%- style %>
-   
-</head>
+<html>
+    <head>
+        <title>
+            <%= title  %>
+        </title>
+        <link rel="stylesheet" href="/css/layout.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/footer.css">
+
+        <%- style %>
+        
+    </head>
+
+    <body>
+        <%- include('_header'); %>
+        
+        <main id="layout-main">
+            <%- body %>
+
+        </main>
 
 
-<body>
-    <%- include ('_header'); %>
+        <%- include('_footer'); %>
 
-    <main id="main-layout">  
-
-    <%-body %>
-
-    </main>
-
-    <%- include ('_footer'); %>
-   
-    
-    <%- script %>
-</body>
-
+        <%- script %>
+        
+    </body>
 </html>
